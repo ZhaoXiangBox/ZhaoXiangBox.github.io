@@ -1,3 +1,609 @@
-<p>Hello 大家好 </p>
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
 
 
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+
+</style><title>ReadMe</title>
+</head>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><center><big><b>个人信息</b></big></center><hr /><p><strong><span>·</span></strong><span> 李照祥/男/1997/湖北/CET-6</span></p><p><strong><span>·</span></strong><span> 手机：15272915445，邮箱：</span><a href='mailto:zhaoxiangbox@163.com' target='_blank' class='url'>zhaoxiangbox@163.com</a></p><p><strong><span>·</span></strong><span> Github：</span><a href='https://github.com/COONEO/neor_mini' target='_blank' class='url'>https://github.com/COONEO/neor_mini</a></p><p>&nbsp;</p><center><big><b>实习经历</b><big></big></big></center><hr /><figure><table><thead><tr><th><img src="image/Logo/Tencent_Logo.png" style="zoom:10%;" /></th><th style='text-align:left;' ><span>腾讯科技（深圳）有限公司 - Robotics X 实习生</span></th><th><span>2021.11-2022.11</span></th></tr></thead><tbody></tbody></table></figure><p><span>1、台阶上的位置可视化：结合动补系统，为机器⼈(Ollie)编写上台阶的Rviz可视化代码</span></p><p><img src="image/Tencent/Ollie-step-visual.jpg" style="zoom:15%;" /></p><p><span> 2、两轮轮腿式机器⼈稳定踏步功能开发：被选⼊Teg事业群对外展⽰机器⼈动作之⼀</span></p><p><img src="image/Tencent/Ollie-Step.gif" style="zoom:65%;" /></p><p><span> 3、触觉传感器⼈机交互：被选⼊Teg事业群对外展⽰机器⼈动作之⼀</span></p><center class="half">
+    <img src="image/Tencent/Ollie-touch-1.gif" width="300">
+    <img src="image/Tencent/Ollie-touch-2.gif" width="300">
+</center><p><span> 4、论⽂：在实习导师的指导下，通过算法解决ollie机器⼈⾃平衡和稳定问题，撰写论⽂</span></p><hr /><p>&nbsp;</p><figure><table><thead><tr><th><img src="image/Logo/COONEO-Logo.png" style="zoom:35%;" /></th><th style='text-align:left;' ><span>酷牛创新（深圳）技术有限公司 -机器人软件开发 实习生</span></th><th><span>2019.11-2020.09</span></th></tr></thead><tbody></tbody></table></figure><p><span>1.1、</span><strong><span>移动底盘功能仿真</span></strong><span>：将阿克曼、差速实体底盘导出URDF⽂件,并且提前使⽤ Gazebo 平台实现SLAM和导航、超声波避障仿真，视觉⻋道线巡线，为真机做预研； </span></p><p><span>1.2、</span><strong><span>移动底盘真机驱动开发</span></strong><span>：阿克曼底盘的正逆运动学模型，制定串⼝通信协议，完成上下位机数据交互，在真机上实现之前仿真预研的相关功能，并编写对应ROS节点；</span></p><p><span>1.3、</span><strong><span>移动底盘真机功能开发</span></strong><span>：轮式/激光⾥程计下的GMapping建图、Hector_mapping建图、 ⾃动导航、视觉⻋道线检测与巡线、多超声波下的决策避障、视觉云台跟踪等； </span></p><p><span>1.4、</span><strong><span>独⽴完成开源项⽬</span></strong><span>：地址如下：(</span><a href='https://github.com/COONEO/neor_mini.git' target='_blank' class='url'>https://github.com/COONEO/neor_mini.git</a><span> ) </span></p><h2 id='star-history'><span>Star History</span></h2><p><a href='https://star-history.com/#COONEO/neor_mini&amp;Date'><img src="https://api.star-history.com/svg?repos=COONEO/neor_mini&amp;type=Date" referrerpolicy="no-referrer" alt="Star History Chart"></a></p><hr /><p><span>2.1、</span><strong><span>码垛机械臂功能仿真</span></strong><span>：导出码垛机械臂URDF⽂件，并使⽤ Moveit Assistant 模拟规划； </span></p><p><span>2.2、</span><strong><span>码垛机械臂真机驱动开发</span></strong><span>：使⽤Arduino mega 2560，步进电机，编写机械臂底层电机驱动程序，并⽤软件⽅式克服步进电机控制下的⼲涉问题；制定串⼝通信协议，实现上下位机通信。</span></p><p><span>2.3、</span><strong><span>码垛机械臂逆向解算算法开发</span></strong><span>：通过⼏何法和D-H⽅法，实现⾃动规划并抓取给定位置的⽬标物功能，并发表⼀篇普通期刊论⽂； </span></p><center class="half">
+    <img src="image/COONEO/arm_pick_place_2.jpg" width="300">
+    <img src="image/COONEO/arm_pick_place_1.jpg" width="400">
+</center><hr /><p><span>3、响应公司业务需求，绘制ROS⼩⻋PCB:为公司的开源社区贡献可以实现阿克曼、履带、差速⼩⻋电机的控制、PPM遥控控制、舵机机械臂控制的Arduino扩展板，并编写配套代码及详细的推⽂，已售卖近百套； </span></p><center class="half">
+    <img src="image/COONEO/PCB-1.gif" width="300">
+    <img src="image/COONEO/PCB-2.gif" width="300">
+    <img src="image/COONEO/PCB-3.gif" width="300">
+    <img src="image/COONEO/PCB-4.gif" width="300">
+</center><p>&nbsp;</p><center><big><b>项目经历</b></big></center><hr /><p><span>⼀、</span><strong><span>⾃动驾驶⼩⻋仿真-开源仓库</span></strong></p><p><span>1、Solidworks 3维图纸转URDF⽂件，选择关节（joint）和实体（link）的⽅法； </span></p><p><span>2、Gazebo下加载并编码驱动阿克曼类型移动底盘； </span></p><p><span>3、Gazebo下移动底盘的正逆向解算，编码实现订阅速度、发布轮式⾥程计数据； </span></p><p><span>4、Gazebo下基于3路超声波实时测距，并⾃定义策略然后实现动态避障； </span></p><p><span>5、Gazebo下基于摄像头和建⽴的Gazebo world 环境，利⽤opencv实现⻋道线寻迹； </span></p><p><span>6、Gazebo下基于单线激光雷达的SLAM建图，分别利⽤轮式⾥程计 + 激光⾥程计； </span></p><p><span>7、Gazebo下基于轮式/激光⾥程计的避障与导航的实现； </span></p><p><span>8、基于ROS Action 通讯⽅式下的多点导航/寻迹节点编码的实现； </span></p><p><span>9、实⻋电机速度PID、转向舵机控制的Arduino程序，串⼝通信程序的编写； </span></p><p><span>A、实⻋SLAM建图导航、视觉寻迹、多点寻迹、超声波避障的实现； </span></p><p><span>B、实⻋基于“张⽒标定法”的⼴⻆摄像头的矫正与去畸变的复现； </span></p><p><span>C、实⻋基于⽬标检测的单⽬测距的编码实现； </span></p><p><span>D、实⻋DWA、TEB、MPC等局部路径规划算法的部署与调试； </span></p><p><span>E、实⻋Dijkstra、A*等全局路径规划算法的部署与调试； </span></p><p><span>F、独⽴制作、维护Git仓库、撰写知乎技术博客，地址如下： </span></p><p><span>github: </span><a href='https://github.com/COONEO/neor_mini.git' target='_blank' class='url'>https://github.com/COONEO/neor_mini.git</a><span> </span></p><p><span>知乎： </span><a href='https://www.zhihu.com/people/jeff-44-13' target='_blank' class='url'>https://www.zhihu.com/people/jeff-44-13</a><span> </span></p><p>&nbsp;</p><p><span>二、</span><strong><span>差速-履带-阿克曼实体建图导航⼩⻋-开源仓库</span></strong></p><p><span>1、通过 Solidworks 绘制机器⼈的各层亚克⼒板图纸及选择对应的机构件； </span></p><p><span>2、使⽤ Arduino mega 2560 + 树莓派4B 的硬件架构，结合底层的控制需求，⽤kicad绘制Arduino 扩展板，预留编码电机、PPM遥控器、舵机、5V稳压电源、⻋辆指⽰灯等硬件接⼝，省去使⽤杜邦线连接的繁琐； </span></p><p><span>3、编写底层 Arduino 的电机 PID 控制、PPM控制、⻋辆指⽰灯状态切换、舵机机械臂控制程序、串⼝通信程序，超声波解析程序等； </span></p><p><span>4、编写对应不同底盘的ROS节点和技术博客，提供配套的软硬件解决⽅案； </span></p><p><span>5、三种类型实体⼩⻋上实现：SLAM定位建图、navigation定点导航、摄像头视觉寻迹、摄像头云台跟踪、颜⾊识别、舵机机械臂抓取等功能； </span></p><p><span>6、项⽬地址：</span><a href='https://github.com/COONEO/Arduino_Raspberry_ROS_Car.git' target='_blank' class='url'>https://github.com/COONEO/Arduino_Raspberry_ROS_Car.git</a><span> </span></p><p><span>7、博客地址：</span><a href='https://www.zhihu.com/people/jeff-44-13' target='_blank' class='url'>https://www.zhihu.com/people/jeff-44-13</a></p><p>&nbsp;</p><p><span>三、</span><strong><span>重庆航道局可视化航标灯项目</span></strong></p><p><span>1、项⽬需要为：⻓江流域重庆航道局段航标灯的可视化传输与⽬标识别与测距软硬件实体的实现； </span></p><p><span>2、结合项⽬体积、功耗、成本等因素，为项⽬做软硬件实体设计调研，并协助研究⽣导师设计基于树莓派CM4的硬件计算主体；</span></p><p><span>3、负责3个130度摄像头模组的选型，图像画⾯的展⽰；、</span></p><p><span>4、使⽤ 某⽬标检测框架的轻量版本 在⾃研的航标灯计算主体上部署船舶识别算法的预研⼯作，给⼩组其他成员搭好框架； </span></p><p><span>5、学习并使⽤ opencv 中的张⽒标定法、求解摄像头模组的内参及畸变参数，并优化画⾯； </span></p><p><span>5、学习并⾃⾏编写单⽬测距算法，该⽅法需要结合⼩组其他成员的⽬标检测的输出结果，实际测量满⾜项⽬需求，为项⽬省增加测距雷达的成本； </span></p><p><span>6、于2021年7⽉，参与重庆市航道局的“可视化航标灯”的验收⼯作，并顺利结项。 </span></p><p>&nbsp;</p><center><big><b>竞赛经历</b></big></center><hr /><p><span>1、“兆易创新杯”第⼗七届研究⽣电⼦设计竞赛 华中分区团队⼀等奖 - 2022.08</span></p><p>&nbsp;</p><center>其他</center><hr /><p><span>1、⼀种可远程控制的照明灯开关⾮接触式按压装置的制作⽅法（本科专利） </span></p><p><span>2、王帅, 张竞帆, 李照祥, 王家浩, 郑宇，移动机器⼈的运动控制⽅法和移动机器⼈，国家发明专利，申请号： </span></p><p><span>202211002012.9，已受理。（腾讯实习期间专利，前两位领导） </span></p><p><span>4、王帅, 张竞帆, 李照祥, 王家浩, 郑宇，移动机器⼈的运动控制⽅法和移动机器⼈，国家发明专利，申请号： </span></p><p><span>202211002000.6，已受理。（腾讯实习期间专利，前两位领导）</span></p></div></div>
+</body>
+</html>
